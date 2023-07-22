@@ -5,6 +5,7 @@ import Resources from "./utils/Resources";
 import Camera from "./Camera";
 import Renderer from "./Renderer";
 import sources from "./sources.js";
+import World from "./World";
 
 let instance = null;
 
@@ -28,6 +29,7 @@ export default class Experience {
     this.scene = new THREE.Scene();
     this.camera = new Camera();
     this.renderer = new Renderer();
+    this.world = new World();
 
     console.log("Experience started");
 
