@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "lil-gui": "^0.18.2",
+    "stats.js": "^0.17.0",
+    "three": "^0.154.0",
+    "vercel": "^31.0.4",
+    "vite": "^4.4.6"
+  },
+  "name": "artexhibition",
+  "version": "1.0.0",
+  "main": "vite.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "vite",
+    "vite": "build"
+  },
+  "author": "abi",
+  "license": "ISC",
+  "description": ""
+}
