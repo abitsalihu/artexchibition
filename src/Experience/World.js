@@ -27,15 +27,21 @@ export default class World {
 
       this.benchTexture.outputColorSpace = THREE.SRGBColorSpace;
 
-      this.museumScene.scene.children[0].material = new THREE.MeshBasicMaterial(
-        { map: this.finalBakedScene }
-      );
+      this.museumScene.scene.traverse((child) => {
+        child.material = new THREE.MeshBasicMaterial({
+          map: this.finalBakedScene,
+        });
+
+        if (child.name.startsWith("photo")) {
+          child.material.map = this.benchTexture;
+        }
+      });
 
       this.bench.scene.children[0].material = new THREE.MeshBasicMaterial({
         map: this.benchTexture,
       });
 
-      this.scene.add(this.museumScene.scene, this.bench.scene);
+      this.scene.add(this.museumScene.scene);
     });
   }
 }

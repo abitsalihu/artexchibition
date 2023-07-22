@@ -7,7 +7,6 @@ export default class Resources extends EventEmitter {
     super();
 
     this.sources = sources;
-    console.log(this.sources);
 
     this.items = [];
     this.itemsToLoad = this.sources.length;
@@ -50,7 +49,6 @@ export default class Resources extends EventEmitter {
     this.itemsLoaded++;
 
     if (this.itemsLoaded === this.itemsToLoad) {
-      console.log(this.items.length);
       this.trigger("ready");
     }
   }

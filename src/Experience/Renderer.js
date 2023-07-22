@@ -20,9 +20,8 @@ export default class Renderer {
     });
     this.instance.setSize(this.sizes.width, this.sizes.height);
     this.instance.setPixelRatio(this.sizes.pixelRatio);
-    this.instance.setClearColor("pink");
+    this.instance.setClearColor("white");
     this.instance.outputColorSpace = THREE.SRGBColorSpace;
-    // this.instance.outputColorSpace = THREE.SRGBColorSpace;
   }
 
   resize() {

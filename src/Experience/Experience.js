@@ -6,6 +6,7 @@ import Camera from "./Camera";
 import Renderer from "./Renderer";
 import sources from "./sources.js";
 import World from "./World";
+import Debug from "./utils/Debug";
 
 let instance = null;
 
@@ -21,6 +22,7 @@ export default class Experience {
 
     window.experience = this;
     //? utils
+    this.debug = new Debug();
     this.sizes = new Sizes();
     this.time = new Time();
     this.resources = new Resources(sources);
@@ -30,8 +32,6 @@ export default class Experience {
     this.camera = new Camera();
     this.renderer = new Renderer();
     this.world = new World();
-
-    console.log("Experience started");
 
     this.sizes.on("resize", () => {
       this.resize();

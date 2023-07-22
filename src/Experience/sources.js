@@ -2,7 +2,7 @@ export default [
   {
     name: "museumScene",
     type: "gltfLoader",
-    url: "/models/museumScene.glb",
+    url: "/models/photographySceneTwo.glb",
   },
 
   {
@@ -14,11 +14,11 @@ export default [
   {
     name: "finalBakedScene",
     type: "textureLoader",
-    url: "/textures/finalBakedScene.webp",
+    url: "/textures/sceneTexture.webp",
   },
   {
     name: "benchTexture",
     type: "textureLoader",
-    url: "/textures/benchTexture.webp",
+    url: "/textures/photosBaked.webp",
   },
 ];
